@@ -1,0 +1,39 @@
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--light-color);
+    transition: color 0.3s ease-in-out;
+
+    &-text {
+      margin-right: 3px;
+      color: #b4b4b4;
+    }
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &--small {
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--text-color);
+
+      .meta__item-text {
+        font-size: 12px;
+        line-height: 16px;
+        color: #b1b1b1;
+      }
+    }
+
+    &--link {
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+}

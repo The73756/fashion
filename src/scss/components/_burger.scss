@@ -1,0 +1,14 @@
+.burger {
+  @include burger;
+
+  z-index: 500;
+  display: none;
+
+  &--active {
+    color: var(--light-color);
+  }
+
+  @include small-tablet {
+    display: block;
+  }
+}

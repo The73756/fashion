@@ -1,0 +1,67 @@
+.media {
+  margin-bottom: 70px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3px;
+  }
+
+  &__item {
+    grid-column: 2 span;
+    outline: 1px solid transparent;
+    min-width: 88px;
+    min-height: 88px;
+    text-align: center;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+
+    @include hover {
+      outline-color: #e5e5e5;
+      transform: scale(1.1);
+    }
+
+    @include big-tablet {
+      grid-column: 3 span;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    @include small-tablet {
+      grid-column: 2 span;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    padding: 13px 18px;
+    padding-top: 17px;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999;
+  }
+
+  &__icon {
+    margin-bottom: 6px;
+    width: 20px;
+    height: 20px;
+    fill: #5a5a5a;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+}

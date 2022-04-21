@@ -1,0 +1,143 @@
+.content {
+  padding: 60px 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+
+    @include mobile {
+      gap: 0;
+    }
+  }
+
+  &-left {
+    grid-column: 9 span;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 30px;
+
+      @include tablet {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
+
+    &__item {
+      grid-column: 4 span;
+      max-width: 370px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+      text-align: center;
+
+      &--big {
+        grid-column: 8 span;
+        margin-top: 30px;
+        max-width: 770px;
+        text-align: left;
+
+        @include mobile {
+          margin-top: 0;
+        }
+      }
+
+      @include small-tablet {
+        max-width: none;
+      }
+
+      @include mobile {
+        grid-column: 8 span;
+      }
+    }
+
+    @include small-tablet {
+      grid-column: 12 span;
+    }
+  }
+
+  &-right {
+    grid-column: 3 span;
+
+    @include small-tablet {
+      display: grid;
+      grid-column: 12 span;
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+
+  @include tablet {
+    padding: 30px 0;
+  }
+}
+
+.content-pag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 8 span;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 1px solid #e5e5e5;
+  padding: 14px 5px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 41px;
+
+      @include mobile {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__link {
+    font-family: "HK Grotesk", sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+
+    &:not([href]) {
+      color: #a2a2a2;
+
+      &:hover {
+        color: #a2a2a2;
+      }
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &--next {
+      padding-right: 20px;
+      font-size: 14px;
+      background-image: url("../img/right-arrow.svg");
+      background-position: center right 6px;
+      background-repeat: no-repeat;
+    }
+
+    &--prev {
+      padding-left: 20px;
+      font-size: 14px;
+      background-image: url("../img/left-arrow.svg");
+      background-position: center left 6px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include tablet {
+    grid-column: 12 span;
+    margin-top: 5px;
+  }
+
+  @include mobile {
+    justify-content: space-between;
+    text-align: center;
+  }
+}

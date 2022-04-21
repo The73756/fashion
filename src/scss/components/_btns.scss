@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  padding: 13px 0;
+  width: 100%;
+  max-width: 270px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  @include small-tablet {
+    max-width: none;
+  }
+}
