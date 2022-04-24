@@ -46,6 +46,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 34px;
+
+      @include mobile {
+        margin-right: 16px;
+      }
     }
   }
 
