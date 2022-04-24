@@ -371,6 +371,11 @@ a {
 .social__item:not(:last-child) {
   margin-right: 20px;
 }
+@media (max-width: 576px) {
+  .social__item:not(:last-child) {
+    margin-right: 16px;
+  }
+}
 .social__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1189,6 +1194,11 @@ a {
 }
 .footer-nav__item:not(:last-child) {
   margin-right: 34px;
+}
+@media (max-width: 576px) {
+  .footer-nav__item:not(:last-child) {
+    margin-right: 16px;
+  }
 }
 .footer-nav__link {
   font-family: "PT Sans", sans-serif;
